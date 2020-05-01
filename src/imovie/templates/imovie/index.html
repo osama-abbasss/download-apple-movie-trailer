@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div class="container">
+        <center>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">URL</label>
+                <input type="text" name='url' class="form-control" id="exampleFormControlInput1"
+                    placeholder="http://trailers.apple.com/trailers/lions_gate/thehungergames/">
+            </div>
+            <br>
+            <button type="submit" class="mt-2 btn btn-primary btn-lg btn-block">Download</button>
+            <h3 class="mt-5">{{message}}</h3>
+        </center>
+    </div>
+</form>
+{% endblock content %}
+
+{% block exstra_scripts %}
+
+{% endblock %}
